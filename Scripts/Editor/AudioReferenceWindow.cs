@@ -86,7 +86,8 @@ namespace NobodyMakesGames.Audio
 
 				// Draw array with its own foldout, no extra title above
 				clipsProp.isExpanded = _clipsExpanded[sound];
-				EditorGUILayout.PropertyField(clipsProp, true);
+				EditorGUILayout.PropertyField(clipsProp, GUIContent.none, true);
+
 				_clipsExpanded[sound] = clipsProp.isExpanded;
 
 				serializedSound.ApplyModifiedProperties();
